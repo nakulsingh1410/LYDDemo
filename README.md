@@ -1,4 +1,4 @@
-# DemoApp
+# LYDDemo
 The Product List Demo is a SwiftUI-based application designed to fetch and display a list of products. The application follows clean architecture principles and incorporates testing to ensure reliability. This document provides an in-depth explanation of the components, architecture, and usage.
 
 # Key Features
