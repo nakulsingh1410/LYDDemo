@@ -55,5 +55,5 @@ Combined Accessibility Elements: Used in list rows for easier navigation.
 
 
 # How to run the app
-This app is developed in Xcode Version 16.2, so please use the atleast xcode 16.2 to run this demo without error
+This app is developed in **Xcode 16.2**, so please **use the atleast xcode 16.2** to run this demo without error
 
