@@ -23,7 +23,7 @@ final class NetworkServiceTest: XCTestCase {
     }
     
     func testFetchDataSuccess() {
-        let validURL = "https://fakestoreapiserver.reactbd.com/products"
+        let validURL = Constant.API.productListApi
         let expectation = self.expectation(description: "Fetch data successfully")
         
         networkService.fetchData(url: validURL) { (result: Result<[Product], Error>) in
