@@ -15,7 +15,7 @@ Implements unit testing for critical components.
 
 # Architecture
 
-The demo employs MVVM (Model-View-ViewModel) architecture with dependency injection. Key components include:
+The demo follows clean architecture principles using the MVVM (Model-View-ViewModel) pattern with dependency injection. Key components include:
 
 **1. View**
 
