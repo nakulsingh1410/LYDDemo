@@ -57,6 +57,8 @@ Combined Accessibility Elements: Used in list rows for easier navigation.
 # How to run the app
 This app is developed in **Xcode 16.2**, so please **use the atleast xcode 16.2** to run this demo without error
 
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-25 at 16 29 27](https://github.com/user-attachments/assets/b2c22653-9470-4d1e-b77f-8cd15fda7a8c)
+
+<img width="261" alt="Screenshot 2024-12-25 at 4 38 10 PM" src="https://github.com/user-attachments/assets/53e051ee-b0bb-4da3-9ad2-84f43f9fe04e" />
+   ![Simulator Screenshot - iPhone 16 Pro - 2024-12-25 at 16 29 27](https://github.com/user-attachments/assets/b2c22653-9470-4d1e-b77f-8cd15fda7a8c)
 
 
