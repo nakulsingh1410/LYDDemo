@@ -3,15 +3,15 @@ The Product List Demo is a SwiftUI-based application designed to fetch and displ
 
 # Key Features
 
-Fetches product data from a remote or mock data source.
+**-** Fetches product data from a remote or mock data source.
 
-Displays a loading indicator during data fetching.
+**-** Displays a loading indicator during data fetching.
 
-Handles errors gracefully with user-friendly messages.
+**-** Handles errors gracefully with user-friendly messages.
 
-Uses SwiftUI for a declarative and accessible user interface.
+**-** Uses SwiftUI for a declarative and accessible user interface.
 
-Implements unit testing for critical components.
+**-** Implements unit testing for critical components.
 
 # Architecture
 
