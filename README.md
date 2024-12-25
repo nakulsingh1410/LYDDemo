@@ -59,7 +59,8 @@ This app is developed in **Xcode 16.2**, so please **use the atleast xcode 16.2*
 
 **- Project output**
 
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-25 at 16 29 27](https://github.com/user-attachments/assets/b2c22653-9470-4d1e-b77f-8cd15fda7a8c)
+<img width="241" alt="Screenshot 2024-12-25 at 9 29 50 PM" src="https://github.com/user-attachments/assets/f12cbd2f-b573-400d-9b1e-c14a8fd26050" />
+
 
 **- Project Structure**
 
