@@ -17,31 +17,31 @@ Implements unit testing for critical components.
 
 The demo employs MVVM (Model-View-ViewModel) architecture with dependency injection. Key components include:
 
-1. View
+**1. View**
 
 SwiftUI views for rendering the user interface.
 
 Views are reactive to changes in the ViewModel state.
 
-2. ViewModel
+**2. ViewModel**
 
 Handles business logic and transforms data for the view.
 
 Manages states like loading, error messages, and product lists.
 
-3. Use Case
+**3. Use Case**
 
 Encapsulates application-specific business rules.
 
 Fetches data using the repository and provides it to the ViewModel.
 
-4. Repository
+**4. Repository**
 
 Interfaces with the data layer (e.g., network service or local data).
 
 Abstracts data fetching mechanisms from higher layers.
 
-5. Network Service
+**5. Network Service**
 
 Handles network requests and decodes JSON responses.
 
