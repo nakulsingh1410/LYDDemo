@@ -62,8 +62,8 @@ This app is developed in **Xcode 16.2**, so please **use the atleast xcode 16.2*
 
 <img width="329" alt="Screenshot 2024-12-25 at 9 34 31 PM" src="https://github.com/user-attachments/assets/de39275d-a390-4785-b0ff-08154f6e5295" />
 
-![Simulator Screenshot - Clone 1 of iPhone 16 Pro - 2024-12-26 at 20 54 04](https://github.com/user-attachments/assets/d1118197-bb36-4c0e-a468-1d30b78af1af)
 
+<img width="322" alt="Screenshot 2024-12-26 at 8 55 17 PM" src="https://github.com/user-attachments/assets/5be6c909-d7a3-4818-9ca1-4b72ad85a69e" />
 
 
 
