@@ -8,14 +8,13 @@
 final class ProductRepository: ProductRepositoryProtocol {
     
     private let networkService: NetworkServiceProtocol
-    private let productListApi = Constant.API.productListApi
     
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
     }
     
     func getProducts(callback: @escaping (Result<[Product], any Error>) -> Void) {
-        networkService.fetchData(url: productListApi) { result in
+        networkService.fetchData(url: Constant.API.productListApi) { result in
             callback(result)
         }
     }

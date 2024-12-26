@@ -2,16 +2,19 @@
   {
     "_id": 1,
     "title": "Long sleeve Jacket",
-    "price": 150
+    "price": 150,
+    "description": "test product1"
   },
   {
     "_id": 2,
     "title": "Jacket with wollen hat",
-    "price": 65
+    "price": 65,
+    "description": "test product2"
   },
   {
     "_id": 3,
     "title": "Compact fashion t-shirt",
-    "price": 55.99
+    "price": 55.99,
+    "description": "test product3"
   }
 ]

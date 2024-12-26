@@ -9,12 +9,21 @@ import SwiftUI
 
 @main
 struct LYDDemoApp: App {
+    
+    @StateObject private var navigationManager = NavigationManager()
+    private let repository = ProductRepository(networkService: NetworkService())
+    private let useCase: FetchProductUseCaseProtocol
+    private let viewModel: ProductListViewModel
+    
+    init () {
+        useCase = FetchProductUseCase(repository: repository)
+        viewModel = ProductListViewModel(useCase: useCase)
+    }
+    
     var body: some Scene {
         WindowGroup {
-            let repository = ProductRepository(networkService: NetworkService())
-            let useCase = FetchProductUseCase(repository: repository)
-            let viewModel = ProductListViewModel(useCase: useCase)
             ProductListView(viewModel: viewModel)
+                .environmentObject(navigationManager)
         }
     }
 }

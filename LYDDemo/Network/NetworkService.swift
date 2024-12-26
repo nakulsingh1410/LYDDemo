@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkService: NetworkServiceProtocol {
+final class NetworkService: NetworkServiceProtocol {
     
     func fetchData<T>(url: String, callback: @escaping (Result<T, any Error>) -> Void) where T : Decodable {
         

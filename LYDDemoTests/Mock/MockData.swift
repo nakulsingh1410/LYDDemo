@@ -9,7 +9,7 @@ import Foundation
 
 @testable import LYDDemo
 
-class MockData {
+final class MockData {
     
     static var produtcList: [Product]  {
         try! JSONDecoder().decode([Product].self, from: productData)

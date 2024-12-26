@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProductListViewModel: ObservableObject {
+final class ProductListViewModel: ObservableObject {
     
     @Published private(set) var products: [Product] = []
     @Published private(set) var errorMesage: String? = nil
@@ -26,10 +26,10 @@ class ProductListViewModel: ObservableObject {
                 self?.isLoading = false
                 switch result {
                 case .success(let products):
-                    debugPrint("Products: \(products)")
+//                    debugPrint("Products: \(products)")
                     self?.products = products
                 case .failure(let error):
-                    debugPrint("Error: \(error)")
+//                    debugPrint("Error: \(error)")
                     self?.errorMesage = error.localizedDescription
                 }
             }

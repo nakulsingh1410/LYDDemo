@@ -11,7 +11,7 @@ import XCTest
 class MockProductRepository: ProductRepositoryProtocol {
     
     var products: [Product] = []
-    var error: Error? = nil
+    var error: Error?
     
     func getProducts(callback: @escaping (Result<[Product], any Error>) -> Void) {
         if let error {

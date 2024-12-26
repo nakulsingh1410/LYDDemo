@@ -41,4 +41,22 @@ final class FetchProductUseCaseTest: XCTestCase {
         }
         waitForExpectations(timeout: 2.0)
     }
+    
+    func testProductListUseCaseFailure() {
+        if let mockService = mockProductRepo as? MockProductRepository {
+            mockService.error = NetworkError.noData
+        }
+        let expectation = self.expectation(description: "ProductListUseCase Failure case")
+        
+        useCase.fetchProduct { result in
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual(error.localizedDescription, NetworkError.noData.localizedDescription)
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 2.0)
+    }
 }
