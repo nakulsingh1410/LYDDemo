@@ -66,6 +66,6 @@ This app is developed in **Xcode 16.2**, so please **use the atleast xcode 16.2*
 
 **- Project Structure**
 
-<img width="241" alt="Screenshot 2024-12-25 at 9 29 50 PM" src="https://github.com/user-attachments/assets/0225620f-c94a-4555-a669-555446c8294e" />
 
+<img width="216" alt="Screenshot 2024-12-26 at 8 52 54 PM" src="https://github.com/user-attachments/assets/7e5e8825-5e67-4ad1-a7f7-f59c95dee77e" />
 
