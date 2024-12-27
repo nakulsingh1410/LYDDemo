@@ -14,7 +14,7 @@ final class ProductRepository: ProductRepositoryProtocol {
     }
     
     func getProducts(callback: @escaping (Result<[Product], any Error>) -> Void) {
-        networkService.fetchData(url: Constant.API.productListApi) { result in
+        networkService.fetchData(url: Constant.API.productsEndpoint) { result in
             callback(result)
         }
     }

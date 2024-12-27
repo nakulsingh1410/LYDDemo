@@ -8,7 +8,7 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        ProgressView(Constant.ProductListConstant.loadingMessage)
-            .accessibilityLabel(Constant.ProductListConstant.loadingMessage)
+        ProgressView(Constant.ProductList.loadingMessage)
+            .accessibilityLabel(Constant.ProductList.loadingMessage)
     }
 }

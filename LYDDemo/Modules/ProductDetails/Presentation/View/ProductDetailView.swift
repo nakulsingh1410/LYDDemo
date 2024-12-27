@@ -19,22 +19,22 @@ struct ProductDetailView: View {
             Text(viewModel.product.title ?? "")
                 .font(.title)
                 .bold()
-                .accessibilityLabel(Constant.ProductDetailConstant.productNameLabel)
+                .accessibilityLabel(Constant.ProductDetail.nameLabel)
             
             Text("$\(viewModel.product.price ?? 0, specifier: "%.2f")")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-                .accessibilityLabel(Constant.ProductDetailConstant.productPriceLabel)
+                .accessibilityLabel(Constant.ProductDetail.priceLabel)
             
             Text(viewModel.product.description ?? "")
                 .font(.body)
                 .multilineTextAlignment(.leading)
-                .accessibilityLabel(Constant.ProductDetailConstant.productDescriptionLabel)
+                .accessibilityLabel(Constant.ProductDetail.descriptionLabel)
             
             Spacer()
         }
         .padding()
-        .accessibilityLabel(Constant.ProductDetailConstant.productDetailScreenLabel)
+        .accessibilityLabel(Constant.ProductDetail.screenLabel)
     }
 }
 

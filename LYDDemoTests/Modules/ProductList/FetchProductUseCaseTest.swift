@@ -10,12 +10,12 @@ import XCTest
 
 final class FetchProductUseCaseTest: XCTestCase {
     var mockProductRepo: ProductRepositoryProtocol!
-    var useCase: FetchProductUseCaseProtocol!
+    var useCase: FetchProductUseCase!
 
     override func setUp() {
         super.setUp()
         mockProductRepo = MockProductRepository()
-        useCase = FetchProductUseCase(repository: mockProductRepo)
+        useCase = FetchProductUseCaseImpl(repository: mockProductRepo)
     }
     
     override func tearDown() {
@@ -30,7 +30,7 @@ final class FetchProductUseCaseTest: XCTestCase {
         }
         let expectation = self.expectation(description: "ProductListUseCase Success case")
         
-        useCase.fetchProduct { result in
+        useCase.fetchProducts { result in
             switch result {
             case .success(let products):
                 XCTAssertEqual(products.count, 3, "The number of products should match the expected count.")
@@ -48,7 +48,7 @@ final class FetchProductUseCaseTest: XCTestCase {
         }
         let expectation = self.expectation(description: "ProductListUseCase Failure case")
         
-        useCase.fetchProduct { result in
+        useCase.fetchProducts { result in
             switch result {
             case .success:
                 XCTFail()

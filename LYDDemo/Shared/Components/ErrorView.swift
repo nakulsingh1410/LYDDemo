@@ -11,7 +11,7 @@ struct ErrorView: View {
     var body: some View {
         Text(errorMessage)
             .foregroundColor(.red)
-            .accessibilityLabel(Constant.ProductListConstant.errorLabel)
+            .accessibilityLabel(Constant.ProductList.errorMessage)
             .accessibilityValue(errorMessage)
     }
 }

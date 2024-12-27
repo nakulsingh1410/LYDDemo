@@ -19,8 +19,8 @@ struct ProductListView: View {
         
         NavigationStack(path: $navigationManager.navigationPath) {
             content
-                .navigationTitle(Constant.ProductListConstant.title)
-                .accessibilityLabel(Constant.ProductListConstant.productListScreenLabel)
+                .navigationTitle(Constant.ProductList.title)
+                .accessibilityLabel(Constant.ProductList.nameLabel)
                 .onAppear() {
                     viewModel.fetchProducts()
                 }
@@ -60,7 +60,7 @@ private struct ProductList: View {
             }
             .buttonStyle(.plain)
         }
-        .accessibilityLabel(Constant.ProductListConstant.productListLabel)
+        .accessibilityLabel(Constant.ProductList.nameLabel)
     }
 }
 
@@ -71,11 +71,11 @@ private struct ProductRow: View {
         VStack(alignment: .leading) {
             Text(product.title ?? "")
                 .font(.headline)
-                .accessibilityLabel(Constant.ProductListConstant.productNameLabel)
+                .accessibilityLabel(Constant.ProductList.nameLabel)
                 .accessibilityValue(product.title ?? "")
             Text("$\(product.price ?? 0, specifier: "%.2f")")
                 .font(.subheadline)
-                .accessibilityLabel(Constant.ProductListConstant.productPriceLabel)
+                .accessibilityLabel(Constant.ProductList.priceLabel)
                 .accessibilityValue("$\(product.price ?? 0, specifier: "%.2f")")
         }
         .accessibilityElement(children: .combine)

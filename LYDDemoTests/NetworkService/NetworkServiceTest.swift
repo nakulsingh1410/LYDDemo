@@ -23,7 +23,7 @@ final class NetworkServiceTest: XCTestCase {
     }
     
     func testFetchDataSuccess() {
-        let validURL = Constant.API.productListApi
+        let validURL = Constant.API.productsEndpoint
         let expectation = self.expectation(description: "Fetch data successfully")
         
         networkService.fetchData(url: validURL) { (result: Result<[Product], Error>) in
@@ -39,6 +39,4 @@ final class NetworkServiceTest: XCTestCase {
         
         waitForExpectations(timeout: 3.0)
     }
-    
-
 }

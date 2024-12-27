@@ -12,11 +12,11 @@ struct LYDDemoApp: App {
     
     @StateObject private var navigationManager = NavigationManager()
     private let repository = ProductRepository(networkService: NetworkService())
-    private let useCase: FetchProductUseCaseProtocol
+    private let useCase: FetchProductUseCase
     private let viewModel: ProductListViewModel
     
     init () {
-        useCase = FetchProductUseCase(repository: repository)
+        useCase = FetchProductUseCaseImpl(repository: repository)
         viewModel = ProductListViewModel(useCase: useCase)
     }
     

@@ -6,25 +6,25 @@
 //
 
 struct Constant {
-    struct ProductListConstant {
+    
+    struct ProductList {
         static let title = "Products"
         static let loadingMessage = "Loading products..."
-        static let errorLabel = "Error message"
-        static let productNameLabel = "Product Name"
-        static let productPriceLabel = "Product Price"
-        static let productListLabel = "Product List"
-        static let productListScreenLabel = "Product list screen"
+        static let errorMessage = "Error message"
+        static let nameLabel = "Product Name"
+        static let priceLabel = "Product Price"
+        static let screenLabel = "Product list screen"
     }
     
-    struct ProductDetailConstant {
+    struct ProductDetail {
         static let title = "Product Details"
-        static let productNameLabel = "Product Name"
-        static let productPriceLabel = "Product Price"
-        static let productDescriptionLabel = "Product Description"
-        static let productDetailScreenLabel = "Product Detail Screen"
+        static let nameLabel = "Product Name"
+        static let priceLabel = "Product Price"
+        static let descriptionLabel = "Product Description"
+        static let screenLabel = "Product Detail Screen"
     }
     
     struct API {
-        static let productListApi = "https://fakestoreapiserver.reactbd.com/products"
+        static let productsEndpoint = "https://fakestoreapiserver.reactbd.com/products"
     }
 }
