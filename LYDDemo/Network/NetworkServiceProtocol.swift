@@ -6,5 +6,5 @@
 //
 
 protocol NetworkServiceProtocol {
-    func fetchData<T: Decodable>(url: String, callback: @escaping (Result<T, Error>) -> Void)
+    func request<T: Decodable>(request: NetworkRequestProtocol, callback: @escaping (Result<T, Error>) -> Void)
 }

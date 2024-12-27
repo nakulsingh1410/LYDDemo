@@ -4,6 +4,7 @@
 //
 //  Created by Singh, Nakul on 24/12/24.
 //
+import Foundation
 
 final class ProductRepository: ProductRepositoryProtocol {
     
@@ -13,8 +14,9 @@ final class ProductRepository: ProductRepositoryProtocol {
         self.networkService = networkService
     }
     
-    func getProducts(callback: @escaping (Result<[Product], any Error>) -> Void) {
-        networkService.fetchData(url: Constant.API.productsEndpoint) { result in
+    func getProducts(callback: @escaping (Result<[Product], Error>) -> Void) {
+        let request = NetworkRequest(path: Constant.API.productsPath, method: .get)
+        networkService.request(request: request) { result in
             callback(result)
         }
     }

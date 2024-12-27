@@ -25,6 +25,10 @@ struct Constant {
     }
     
     struct API {
-        static let productsEndpoint = "https://fakestoreapiserver.reactbd.com/products"
+        // Base URL
+        static let host = "fakestoreapiserver.reactbd.com"
+       
+        // Endpoints
+        static let productsPath = "/products"
     }
 }

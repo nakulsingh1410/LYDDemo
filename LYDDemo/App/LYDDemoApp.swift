@@ -11,7 +11,7 @@ import SwiftUI
 struct LYDDemoApp: App {
     
     @StateObject private var navigationManager = NavigationManager()
-    private let repository = ProductRepository(networkService: NetworkService())
+    private let repository = ProductRepository(networkService: NetworkManager())
     private let useCase: FetchProductUseCase
     private let viewModel: ProductListViewModel
     

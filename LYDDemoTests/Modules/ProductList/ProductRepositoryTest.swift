@@ -11,11 +11,11 @@ import XCTest
 final class ProductRepositoryTest: XCTestCase {
 
     var mockNetworkService: NetworkServiceProtocol!
-    var productRepository: ProductRepository!
+    var productRepository: ProductRepositoryProtocol!
    
     override func setUp() {
         super.setUp()
-        mockNetworkService = MockNetworkService()
+        mockNetworkService = MockNetworkManager()
         productRepository = ProductRepository(networkService: mockNetworkService)
     }
     
@@ -27,7 +27,7 @@ final class ProductRepositoryTest: XCTestCase {
 
     func testSuccessScenario() {
         let produtcList = MockData.produtcList
-        if let mockService = mockNetworkService as? MockNetworkService {
+        if let mockService = mockNetworkService as? MockNetworkManager {
             mockService.data = MockData.productData
         }
         
@@ -48,7 +48,7 @@ final class ProductRepositoryTest: XCTestCase {
     }
 
     func testFailureScenario() {
-        if let mockService = mockNetworkService as? MockNetworkService {
+        if let mockService = mockNetworkService as? MockNetworkManager {
             mockService.error = NetworkError.noData
         }
         
@@ -65,5 +65,4 @@ final class ProductRepositoryTest: XCTestCase {
         
         waitForExpectations(timeout: 2)
     }
-
 }

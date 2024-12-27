@@ -7,19 +7,23 @@
 
 enum NetworkError: Error {
     case invalidURL
-    case invalidResponse
+    case invalidRequest
+    case badRequest
+    case noResponse
+    case failed
     case invalidData
     case noData
-    case invalidJSON
     case custom(message: String)
     
     var description: String {
         switch self {
+        case .badRequest: return "Bad Request."
         case .invalidURL: return "The URL provided is invalid."
-        case .invalidResponse: return "The response from the server is invalid."
-        case .invalidData: return "The data received is corrupted or invalid."
+        case .invalidRequest: return "The request is invalid."
+        case .noResponse: return "No response from the server."
+        case .failed: return "An error occurred while performing the request."
+        case .invalidData: return "Unable to decode data"
         case .noData: return "No data was returned from the server."
-        case .invalidJSON: return "The response data could not be parsed as JSON."
         case .custom(let message): return message
         }
     }
