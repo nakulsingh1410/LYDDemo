@@ -20,7 +20,7 @@ final class ProductListViewUITests: XCTestCase {
         XCTAssertTrue(exists)
         
     }
-
+    
     @MainActor
     func testAccessibilty() {
         let app = XCUIApplication()
@@ -34,5 +34,4 @@ final class ProductListViewUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Product Price"].exists)
         
     }
-
 }
