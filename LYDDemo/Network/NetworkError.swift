@@ -13,7 +13,7 @@ enum NetworkError: Error {
     case invalidJSON
     case custom(message: String)
     
-    var descrition: String {
+    var description: String {
         switch self {
         case .invalidURL: return "The URL provided is invalid."
         case .invalidResponse: return "The response from the server is invalid."
