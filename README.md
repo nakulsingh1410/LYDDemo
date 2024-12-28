@@ -1,17 +1,17 @@
 # LYDDemo
-The Product List Demo is a SwiftUI-based application designed to fetch and display a list of products. The application follows clean architecture principles and incorporates testing to ensure reliability. This document provides an in-depth explanation of the components, architecture, and usage.
+The Product List Demo is an app built using SwiftUI that shows a list of products. It is designed using simple and organized code practices to make it easy to manage. The app also includes tests to make sure everything works as expected. This document explains how the app is put together, how it works, and how to use it. The app is developed in Xcode 16.2, so please run it in the same or a newer version of Xcode to see the output.
 
 # Key Features
 
-**-** Fetches product data from a remote or mock data source.
+**-** Fetches product data from a remote (https://fakestoreapiserver.reactbd.com/products).
 
-**-** Displays a loading indicator during data fetching.
+**-** Displays a loading indicator when fetching data.
 
-**-** Handles errors gracefully with user-friendly messages.
+**-** Handles errors and showing error message.
 
-**-** Uses SwiftUI for a declarative and accessible user interface.
+**-** It uses SwiftUI to create a user interface that is easy to understand.
 
-**-** Implements unit testing for critical components.
+**-** It includes tests for important parts of the app to make sure they work correctly.
 
 # Architecture
 
@@ -19,39 +19,38 @@ The demo follows clean architecture principles using the MVVM (Model-View-ViewMo
 
 **1. View**
 
-SwiftUI views for rendering the user interface.
+Uses SwiftUI views to create the app's user interface.
 
-Views are reactive to changes in the ViewModel state.
+The views automatically update when the ViewModel's data changes.
 
 **2. ViewModel**
 
-Handles business logic and transforms data for the view.
+It processes the data and prepares it for display in the view.
 
 Manages states like loading, error messages, and product lists.
 
 **3. Use Case**
+It contains the specific rules (business rules) and logic that are unique to how the app works.
 
-Encapsulates application-specific business rules.
-
-Fetches data using the repository and provides it to the ViewModel.
+It gets the data from the repository and passes it to the ViewModel.
 
 **4. Repository**
 
-Interfaces with the data layer (e.g., network service or local data).
+It interacts with the data layer, like the network service or local data storage.
 
-Abstracts data fetching mechanisms from higher layers.
+It hides the details of how data is fetched from the parts of the app that use it.
 
 **5. Network Service**
 
-Handles network requests and decodes JSON responses.
+It manages the process of making network requests and converting the received JSON data into usable objects.
 
 # Accessibility
 
-The app includes accessibility features for better usability:
+The app includes accessibility features that make it easier to use for people with disabilities
 
-Labels and Values: Added for all elements.
+Labels and values are added to all elements to make them easier to identify and understand.
 
-Combined Accessibility Elements: Used in list rows for easier navigation.
+Combined accessibility elements are used in list rows to make navigation simpler.
 
 
 # How to run the app
