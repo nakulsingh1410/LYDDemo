@@ -7,9 +7,9 @@
 
 final class ProductService: ProductServiceProtocol {
     
-    private let networkService: NetworkServiceProtocol
+    private let networkService: NetworkManagerProtocol
     
-    init(networkService: NetworkServiceProtocol) {
+    init(networkService: NetworkManagerProtocol) {
         self.networkService = networkService
     }
     

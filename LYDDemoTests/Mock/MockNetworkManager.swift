@@ -8,7 +8,7 @@
 @testable import LYDDemo
 import Foundation
 
-class MockNetworkManager: NetworkServiceProtocol {
+class MockNetworkManager: NetworkManagerProtocol {
     var data: Data?
     var error: Error?
     

@@ -14,7 +14,7 @@ final class AppDependencyManager {
         NavigationManager()
     }()
     
-    lazy var networkService: NetworkServiceProtocol = {
+    lazy var networkService: NetworkManagerProtocol = {
         NetworkManager()
     }()
     

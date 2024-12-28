@@ -6,12 +6,12 @@
 //
 
 final class ProductModule {
-    private let networkService: NetworkServiceProtocol
+    private let networkService: NetworkManagerProtocol
     private let productService: ProductServiceProtocol
     private let repository: ProductRepositoryProtocol
     private let useCase: FetchProductUseCase
     
-    init(networkService: NetworkServiceProtocol) {
+    init(networkService: NetworkManagerProtocol) {
         self.networkService = networkService
         self.productService = ProductService(networkService: networkService)
         self.repository = ProductRepository(productService: productService)
