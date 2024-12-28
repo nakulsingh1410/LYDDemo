@@ -6,5 +6,5 @@
 //
 
 protocol ProductRepositoryProtocol {
-    func getProducts(callback: @escaping (Result<[Product], Error>) -> Void)
+    func getProducts(callback: @escaping (Result<[ProductDomainDTO], Error>) -> Void)
 }

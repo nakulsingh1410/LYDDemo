@@ -26,7 +26,7 @@ final class FetchProductUseCaseTest: XCTestCase {
 
     func testProductListUseCaseSuccess() {
         if let mockProductRepo = mockProductRepo as? MockProductRepository {
-            mockProductRepo.products = MockData.produtcList
+            mockProductRepo.products = MockData.domainProduts
         }
         let expectation = self.expectation(description: "ProductListUseCase Success case")
         
@@ -34,7 +34,7 @@ final class FetchProductUseCaseTest: XCTestCase {
             switch result {
             case .success(let products):
                 XCTAssertEqual(products.count, 3, "The number of products should match the expected count.")
-                expectation.fulfill()  // Fulfill the expectation when the result is successful
+                expectation.fulfill() 
             case .failure:
                 XCTFail("Fetching products failed unexpectedly")
             }
@@ -44,7 +44,7 @@ final class FetchProductUseCaseTest: XCTestCase {
     
     func testProductListUseCaseFailure() {
         if let mockService = mockProductRepo as? MockProductRepository {
-            mockService.error = NetworkError.noData
+            mockService.error = NetworkError.failed
         }
         let expectation = self.expectation(description: "ProductListUseCase Failure case")
         
@@ -53,7 +53,7 @@ final class FetchProductUseCaseTest: XCTestCase {
             case .success:
                 XCTFail()
             case .failure(let error):
-                XCTAssertEqual(error.localizedDescription, NetworkError.noData.localizedDescription)
+                XCTAssertEqual(error.localizedDescription, NetworkError.failed.localizedDescription)
             }
             expectation.fulfill()
         }

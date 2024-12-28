@@ -7,7 +7,15 @@
 
 import Foundation
 
-final class ProductListViewModel: ObservableObject {
+protocol ProductListViewModelProtocol: ObservableObject {
+    var products: [Product] { get }
+    var errorMesage: String? { get }
+    var isLoading: Bool { get }
+    
+    func fetchProducts()
+}
+
+final class ProductListViewModel: ProductListViewModelProtocol {
     
     @Published private(set) var products: [Product] = []
     @Published private(set) var errorMesage: String?

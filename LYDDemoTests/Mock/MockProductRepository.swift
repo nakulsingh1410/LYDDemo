@@ -10,10 +10,10 @@ import XCTest
 
 class MockProductRepository: ProductRepositoryProtocol {
     
-    var products: [Product] = []
+    var products: [ProductDomainDTO] = []
     var error: Error?
     
-    func getProducts(callback: @escaping (Result<[Product], any Error>) -> Void) {
+    func getProducts(callback: @escaping (Result<[ProductDomainDTO], any Error>) -> Void) {
         if let error {
             callback(.failure(error))
             return

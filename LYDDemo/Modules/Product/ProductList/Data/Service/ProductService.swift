@@ -1,12 +1,11 @@
 //
-//  ProductRepository.swift
+//  ProductServiceProtocol.swift
 //  LYDDemo
 //
-//  Created by Singh, Nakul on 24/12/24.
+//  Created by Singh, Nakul on 28/12/24.
 //
-import Foundation
 
-final class ProductRepository: ProductRepositoryProtocol {
+final class ProductService: ProductServiceProtocol {
     
     private let networkService: NetworkServiceProtocol
     
@@ -14,10 +13,10 @@ final class ProductRepository: ProductRepositoryProtocol {
         self.networkService = networkService
     }
     
-    func getProducts(callback: @escaping (Result<[Product], Error>) -> Void) {
+    func getProductsFromNetwork(completion: @escaping (Result<[ProductResponse], Error>) -> Void) {
         let request = NetworkRequest(path: Constant.API.productsPath, method: .get)
         networkService.request(request: request) { result in
-            callback(result)
+            completion(result)
         }
     }
 }

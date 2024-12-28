@@ -11,8 +11,15 @@ import Foundation
 
 final class MockData {
     
-    static var produtcList: [Product]  {
-        try! JSONDecoder().decode([Product].self, from: productData)
+    static var produtsResponse: [ProductResponse]  {
+        try! JSONDecoder().decode([ProductResponse].self, from: productData)
+    }
+    static var produts: [Product]  {
+        domainProduts.map {$0.toPresentation()}
+    }
+    
+    static var domainProduts: [ProductDomainDTO]  {
+        produtsResponse.map {$0.toDomain()}
     }
     
     static var productData: Data {

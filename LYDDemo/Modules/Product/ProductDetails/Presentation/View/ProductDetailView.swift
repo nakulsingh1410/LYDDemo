@@ -16,17 +16,17 @@ struct ProductDetailView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(viewModel.product.title ?? "")
+            Text(viewModel.product.title)
                 .font(.title)
                 .bold()
                 .accessibilityLabel(Constant.ProductDetail.nameLabel)
             
-            Text("$\(viewModel.product.price ?? 0, specifier: "%.2f")")
+            Text("$\(viewModel.product.price, specifier: "%.2f")")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .accessibilityLabel(Constant.ProductDetail.priceLabel)
             
-            Text(viewModel.product.description ?? "")
+            Text(viewModel.product.description)
                 .font(.body)
                 .multilineTextAlignment(.leading)
                 .accessibilityLabel(Constant.ProductDetail.descriptionLabel)

@@ -26,15 +26,15 @@ final class ProductListViewModelTests: XCTestCase {
     }
     
     func testSuccessScenario()  {
-        let expectedProducts = MockData.produtcList
+        let expectedProducts = MockData.produts
         mockUseCase.products = expectedProducts
         viewModel.fetchProducts()
         
         let expectation = XCTestExpectation(description: "Fetch products success case")
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertFalse(self.viewModel.isLoading, "ViewModel should stop loading after fetching.")
-            XCTAssertEqual(self.viewModel.products.first?._id, expectedProducts[0]._id)
-            XCTAssertNil(self.viewModel.errorMesage, "Error message should be nil on success.")
+            XCTAssertFalse(self.viewModel.isLoading, "ViewModel should stop loading after fetching")
+            XCTAssertEqual(self.viewModel.products.first?.id, expectedProducts[0].id)
+            XCTAssertNil(self.viewModel.errorMesage, "Error message should be nil on success")
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 2.0)
@@ -48,8 +48,8 @@ final class ProductListViewModelTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Fetch products failure case")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertFalse(self.viewModel.isLoading, "ViewModel should stop loading after fetching.")
-            XCTAssertTrue(self.viewModel.products.isEmpty, "Products array should be empty on failure.")
+            XCTAssertFalse(self.viewModel.isLoading, "ViewModel should stop loading after fetching")
+            XCTAssertTrue(self.viewModel.products.isEmpty, "Products array should be empty on failure")
             XCTAssertEqual(self.viewModel.errorMesage, expectedError.localizedDescription)
             expectation.fulfill()
         }

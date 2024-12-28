@@ -52,7 +52,7 @@ private struct ProductList: View {
     let products: [Product]
     
     var body: some View {
-        List(products, id: \.self._id) { product in
+        List(products, id: \.self.id) { product in
             Button(action: {
                 navigationManager.navigateTo(AppRoute.productDetail(product: product))
             }) {
@@ -69,14 +69,14 @@ private struct ProductRow: View {
     let product: Product
     var body: some View {
         VStack(alignment: .leading) {
-            Text(product.title ?? "")
+            Text(product.title)
                 .font(.headline)
                 .accessibilityLabel(Constant.ProductList.nameLabel)
-                .accessibilityValue(product.title ?? "")
-            Text("$\(product.price ?? 0, specifier: "%.2f")")
+                .accessibilityValue(product.title)
+            Text("$\(product.price, specifier: "%.2f")")
                 .font(.subheadline)
                 .accessibilityLabel(Constant.ProductList.priceLabel)
-                .accessibilityValue("$\(product.price ?? 0, specifier: "%.2f")")
+                .accessibilityValue("$\(product.price, specifier: "%.2f")")
         }
         .accessibilityElement(children: .combine)
     }

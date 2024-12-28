@@ -42,10 +42,10 @@ final class NetworkManagerTest: XCTestCase {
         
         let expectation = self.expectation(description: "success response")
         
-        networkManager.request(request: urlRequest) { (result: Result<[Product], Error>) in
+        networkManager.request(request: urlRequest) { (result: Result<[ProductResponse], Error>) in
             switch result {
             case .success(let products):
-                XCTAssertEqual(products.first?._id, 1)
+                XCTAssertEqual(products.first?.id, 1)
                 XCTAssertEqual(products.first?.title, "Long sleeve Jacket")
                 expectation.fulfill()
             case .failure:
@@ -68,7 +68,7 @@ final class NetworkManagerTest: XCTestCase {
         mockUrlSession.urlResponse = urlResponse
         mockUrlSession.error = error
         
-        networkManager.request(request: request) { (result: Result<Product, Error>) in
+        networkManager.request(request: request) { (result: Result<ProductResponse, Error>) in
             switch result {
             case .success:
                 XCTFail("Expected failure, but got success.")
