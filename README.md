@@ -1,5 +1,5 @@
 # LYDDemo
-The Product List Demo is an app built using SwiftUI that shows a list of products. It is developed using simple and organized code practices to make it easy to manage. The app also includes tests to make sure everything works as expected. The app is developed in Xcode 16.2, so please run it in the same or a newer version of Xcode to see the output.
+The Product List Demo is an app built using SwiftUI that shows a list of products and product detail. It is developed using simple and organized code practices to make it easy to manage. The app also includes tests to make sure everything works as expected. The app is developed in Xcode 16.2, so please run it in the same or a newer version of Xcode to see the output.
 
 # Key Features
 
